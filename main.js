@@ -18,8 +18,6 @@ const cross = `<i class="fas fa-times"></i>`;
 const circle = `<i class="far fa-circle"></i>`;
 let btn = document.getElementsByClassName('btn');
 
-
-
 let press = (boton) => {
     if (!boton.innerHTML.length > 0) {
         if (turno) {
@@ -46,6 +44,7 @@ let restartGame = () => {
 }
 
 let findWinner = () => {
+
     //Lineas Horizontales
     if (btn[0].innerHTML == circle &&
         btn[1].innerHTML == circle &&
@@ -77,6 +76,7 @@ let findWinner = () => {
         btn[8].innerHTML == cross) {
         showWinner('1');
     }
+
     //Lineas Verticales
     if (btn[0].innerHTML == circle &&
         btn[3].innerHTML == circle &&
@@ -110,6 +110,7 @@ let findWinner = () => {
         btn[8].innerHTML == cross) {
         showWinner('1');
     }
+
     //Linas Cruzadas
     if (btn[0].innerHTML == circle &&
         btn[4].innerHTML == circle &&
@@ -131,4 +132,5 @@ let findWinner = () => {
         btn[2].innerHTML == cross) {
         showWinner('1');
     }
+    
 }
